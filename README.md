@@ -2,7 +2,7 @@
 
 # Novelis
 
-![PHP](https://img.shields.io/badge/PHP-FFD43B?style=for-the-badge&logo=php&logoColor=blue)
+![PHP](https://img.shields.io/badge/Kotlin-FFD43B?style=for-the-badge&logo=kotlin&logoColor=blue)
 ![Forks](https://img.shields.io/github/forks/Albert1915/Novelis?style=for-the-badge)
 ![Contributors](https://img.shields.io/github/contributors/Albert1915/Novelis?style=for-the-badge)
 ![Stars](https://img.shields.io/github/stars/Albert1915/Novelis?style=for-the-badge)
