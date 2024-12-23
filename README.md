@@ -29,14 +29,9 @@ Feel free to visit the [Novelis GitHub repository](https://github.com/Albert1915
 <table align="center">
   <tr>
     <td align="center"><a href="https://github.com/Albert1915"><img src="https://avatars.githubusercontent.com/u/76970766?s=400&u=adf4015762046d3e3ab4178b48366719243df2fc&v=4" width="150px;" alt=""/><br><sub><b>Albert Okario</b></sub></td> 
-  </tr>
-  <tr>
     <td align="center"><a href="https://github.com/GaryMelvin"><img src="https://avatars.githubusercontent.com/u/101509681?v=4" width="150px;" alt=""/><br><sub><b>Gary Melvin Lie</b></sub></td> 
-  </tr>
-  <tr>
     <td align="center"><a href="https://github.com/jstmnd"><img src="https://avatars.githubusercontent.com/u/99030230?v=4" width="150px;" alt=""/><br><sub><b>Ni Wayan Amanda Putri Astawa</b></sub></td> 
-  </tr>
-  <tr>
     <td align="center"><a href="https://github.com/krisna595"><img src="https://avatars.githubusercontent.com/u/52460506?v=4" width="150px;" alt=""/><br><sub><b>Krisna Megadana</b></sub></td> 
   </tr>
+
 </table>
