@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("com.google.devtools.ksp")
     id("dagger.hilt.android.plugin")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -52,7 +53,17 @@ android {
 }
 
 dependencies {
-
+    implementation ("com.google.firebase:firebase-auth:23.1.0")
+    implementation ("com.google.android.gms:play-services-auth:21.3.0")
+    implementation ("androidx.activity:activity-ktx:1.9.3")
+    implementation ("com.google.android.gms:play-services-auth:20.7.0")
+    implementation ("com.google.android.gms:play-services-auth:20.7.0") // Untuk Google Sign-In
+    implementation("androidx.compose.ui:ui") // Untuk Compose UI jika menggunakan Compose
+    implementation("androidx.activity:activity-compose:1.8.0") // Untuk Compose Activity
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("com.google.android.material:material:1.12.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.2.0")
+    implementation("com.google.firebase:firebase-auth:23.1.0")
     testImplementation("junit:junit:4.12")
     testImplementation("junit:junit:4.12")
     // Testing
@@ -88,7 +99,8 @@ dependencies {
     ksp("androidx.room:room-compiler:2.6.0")
     implementation ("androidx.room:room-ktx:2.6.0")
 
-
+    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
+    implementation("com.google.firebase:firebase-analytics")
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("androidx.activity:activity-compose:1.8.0")

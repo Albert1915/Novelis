@@ -4,12 +4,13 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBackIos
@@ -35,8 +36,16 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.alz19.novelis.R
 
+data class AboutModel(
+    val name: String,
+    val email: String,
+    val university: String,
+    val profileImage: Int
+)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
+
+
 fun AboutScreen(
     navController: NavController,
 ) {
@@ -68,54 +77,63 @@ fun AboutScreen(
         Column(
             modifier = Modifier
                 .padding(paddingValues)
-                .fillMaxSize(),
-            verticalArrangement = Arrangement.Center,
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState()),
+            verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Row {
-                Text(
-                    text = "Hello",
-                    fontSize = 24.sp,
-                    fontWeight = FontWeight.SemiBold,
-                    color = MaterialTheme.colorScheme.primary
+            Spacer(modifier = Modifier.height(20.dp))
+            people.forEach { person ->
+                AboutPerson(
+                    name = person.name,
+                    email = person.email,
+                    university = person.university,
+                    profileImage = person.profileImage
                 )
-                Text(
-                    text = "There",
-                    fontSize = 24.sp,
-                    fontWeight = FontWeight.SemiBold
-                )
+                Spacer(modifier = Modifier.height(30.dp))
             }
-            Spacer(modifier = Modifier.height(20.dp))
-            Image(
-                painter = painterResource(id = R.drawable.profile),
-                contentDescription = "Avatar",
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .size(180.dp)
-                    .clip(CircleShape)
-                    .border(2.dp, Color.Gray, CircleShape)// clip to the circle shape
-            )
-            Spacer(modifier = Modifier.height(20.dp))
-            Text(
-                text = "Albert Okario",
-                fontSize = 18.sp,
-                fontWeight = FontWeight.SemiBold
-
-            )
-            Spacer(modifier = Modifier.height(10.dp))
-            Text(
-                text = "a014bsy2610@gmail.com",
-                fontSize = 16.sp,
-            )
-            Text(
-                text = "Udayana University",
-                fontSize = 16.sp,
-            )
-
         }
     }
 }
 
+@Composable
+fun AboutPerson(name: String, email: String, university: String, profileImage: Int) {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Image(
+            painter = painterResource(id = profileImage),
+            contentDescription = "Avatar",
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .size(180.dp)
+                .clip(CircleShape)
+                .border(2.dp, Color.Gray, CircleShape)
+        )
+        Spacer(modifier = Modifier.height(10.dp))
+        Text(
+            text = name,
+            fontSize = 18.sp,
+            fontWeight = FontWeight.SemiBold
+        )
+        Spacer(modifier = Modifier.height(5.dp))
+        Text(
+            text = email,
+            fontSize = 16.sp
+        )
+        Text(
+            text = university,
+            fontSize = 16.sp
+        )
+    }
+}
+
+val people = listOf(
+    AboutModel("Gary Melvin Lie", "2108561023", "Udayana University", R.drawable.melvin),
+    AboutModel("Ni Wayan Amanda Putri Astawa", "2108561029", "Udayana University", R.drawable.manda),
+    AboutModel("Albert Okario", "2108561059", "Udayana University", R.drawable.albert),
+    AboutModel("I Putu Krisna Megadana", "2108561104", "Udayana University", R.drawable.krismeg)
+)
 
 @Preview(showBackground = true)
 @Composable
@@ -123,4 +141,5 @@ fun AboutScreenPreview() {
     AboutScreen(
         navController = rememberNavController(),
     )
+
 }

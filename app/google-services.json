@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "582565994180",
+    "project_id": "novelis-6e3bd",
+    "storage_bucket": "novelis-6e3bd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:582565994180:android:ef3afdcc7169154e66f391",
+        "android_client_info": {
+          "package_name": "com.alz19.novelis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "582565994180-n69v3g1c19k0fjc1nn0o6aslu2c4h17h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alz19.novelis",
+            "certificate_hash": "2f8f7e08a9c8f062fdb63ebf5b15dbada9aa67f5"
+          }
+        },
+        {
+          "client_id": "582565994180-553dpu1m5fmvatvu7iogjm91atlm6m7p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZum-PR-qJXvUmPF7cAot3VGMArQx6jrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "582565994180-553dpu1m5fmvatvu7iogjm91atlm6m7p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Novelis</string>
+    <string name="default_web_client_id">582565994180-n69v3g1c19k0fjc1nn0o6aslu2c4h17h.apps.googleusercontent.com</string>
+    <string name="Gary">Gary Melvin Lie</string>
 </resources>
